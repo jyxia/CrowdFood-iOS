@@ -1,0 +1,641 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		17A22E736C4E326727239D4A /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCD6E838F1DAADCADC71A012 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		FC6A57D21BC962F000F6C889 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6A57D11BC962F000F6C889 /* AppDelegate.swift */; };
+		FC6A57D71BC962F000F6C889 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC6A57D51BC962F000F6C889 /* Main.storyboard */; };
+		FC6A57DA1BC962F000F6C889 /* CrowdFood.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FC6A57D81BC962F000F6C889 /* CrowdFood.xcdatamodeld */; };
+		FC6A57DC1BC962F000F6C889 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC6A57DB1BC962F000F6C889 /* Assets.xcassets */; };
+		FC6A57DF1BC962F000F6C889 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC6A57DD1BC962F000F6C889 /* LaunchScreen.storyboard */; };
+		FC6A57EA1BC962F000F6C889 /* CrowdFoodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6A57E91BC962F000F6C889 /* CrowdFoodTests.swift */; };
+		FC6A57F51BC962F000F6C889 /* CrowdFoodUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6A57F41BC962F000F6C889 /* CrowdFoodUITests.swift */; };
+		FC6A58061BC96A9600F6C889 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FC6A58031BC96A9600F6C889 /* Default-568h@2x.png */; settings = {ASSET_TAGS = (); }; };
+		FC6A58071BC96A9600F6C889 /* Museo500-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = FC6A58041BC96A9600F6C889 /* Museo500-Regular.otf */; settings = {ASSET_TAGS = (); }; };
+		FC6A58081BC96A9600F6C889 /* restaurant.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = FC6A58051BC96A9600F6C889 /* restaurant.mp4 */; settings = {ASSET_TAGS = (); }; };
+		FC6A580B1BC96C0C00F6C889 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6A580A1BC96C0C00F6C889 /* HomeViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		FC6A580D1BC9783400F6C889 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC6A580C1BC9783400F6C889 /* MapKit.framework */; };
+		FC6A580F1BC97AA700F6C889 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6A580E1BC97AA700F6C889 /* MapViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		FC6A58111BC97F0B00F6C889 /* Future.png in Resources */ = {isa = PBXBuildFile; fileRef = FC6A58101BC97F0B00F6C889 /* Future.png */; settings = {ASSET_TAGS = (); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FC6A57E61BC962F000F6C889 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC6A57C61BC962EF00F6C889 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FC6A57CD1BC962EF00F6C889;
+			remoteInfo = CrowdFood;
+		};
+		FC6A57F11BC962F000F6C889 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC6A57C61BC962EF00F6C889 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FC6A57CD1BC962EF00F6C889;
+			remoteInfo = CrowdFood;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2E6B8A45FCA199EEB46E3DB3 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		5DC8D1477EC2B374F54530AD /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		FC6A57CE1BC962F000F6C889 /* CrowdFood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrowdFood.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC6A57D11BC962F000F6C889 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FC6A57D61BC962F000F6C889 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FC6A57D91BC962F000F6C889 /* CrowdFood.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CrowdFood.xcdatamodel; sourceTree = "<group>"; };
+		FC6A57DB1BC962F000F6C889 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FC6A57DE1BC962F000F6C889 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FC6A57E01BC962F000F6C889 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC6A57E51BC962F000F6C889 /* CrowdFoodTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CrowdFoodTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC6A57E91BC962F000F6C889 /* CrowdFoodTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrowdFoodTests.swift; sourceTree = "<group>"; };
+		FC6A57EB1BC962F000F6C889 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC6A57F01BC962F000F6C889 /* CrowdFoodUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CrowdFoodUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC6A57F41BC962F000F6C889 /* CrowdFoodUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrowdFoodUITests.swift; sourceTree = "<group>"; };
+		FC6A57F61BC962F000F6C889 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC6A58031BC96A9600F6C889 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		FC6A58041BC96A9600F6C889 /* Museo500-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Museo500-Regular.otf"; sourceTree = "<group>"; };
+		FC6A58051BC96A9600F6C889 /* restaurant.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = restaurant.mp4; sourceTree = "<group>"; };
+		FC6A580A1BC96C0C00F6C889 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		FC6A580C1BC9783400F6C889 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		FC6A580E1BC97AA700F6C889 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		FC6A58101BC97F0B00F6C889 /* Future.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Future.png; sourceTree = "<group>"; };
+		FCD6E838F1DAADCADC71A012 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FC6A57CB1BC962EF00F6C889 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC6A580D1BC9783400F6C889 /* MapKit.framework in Frameworks */,
+				17A22E736C4E326727239D4A /* Pods.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC6A57E21BC962F000F6C889 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC6A57ED1BC962F000F6C889 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		570F12B0CF9D29999505B0EF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5DC8D1477EC2B374F54530AD /* Pods.debug.xcconfig */,
+				2E6B8A45FCA199EEB46E3DB3 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		EFD501AC6687C4D9DDE4958D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FC6A580C1BC9783400F6C889 /* MapKit.framework */,
+				FCD6E838F1DAADCADC71A012 /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FC6A57C51BC962EF00F6C889 = {
+			isa = PBXGroup;
+			children = (
+				FC6A57D01BC962F000F6C889 /* CrowdFood */,
+				FC6A57E81BC962F000F6C889 /* CrowdFoodTests */,
+				FC6A57F31BC962F000F6C889 /* CrowdFoodUITests */,
+				FC6A57CF1BC962F000F6C889 /* Products */,
+				570F12B0CF9D29999505B0EF /* Pods */,
+				EFD501AC6687C4D9DDE4958D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		FC6A57CF1BC962F000F6C889 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FC6A57CE1BC962F000F6C889 /* CrowdFood.app */,
+				FC6A57E51BC962F000F6C889 /* CrowdFoodTests.xctest */,
+				FC6A57F01BC962F000F6C889 /* CrowdFoodUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FC6A57D01BC962F000F6C889 /* CrowdFood */ = {
+			isa = PBXGroup;
+			children = (
+				FC6A58091BC96AC900F6C889 /* Controllers */,
+				FC6A58021BC96A2400F6C889 /* Resources */,
+				FC6A57D11BC962F000F6C889 /* AppDelegate.swift */,
+				FC6A57D51BC962F000F6C889 /* Main.storyboard */,
+				FC6A57DB1BC962F000F6C889 /* Assets.xcassets */,
+				FC6A57DD1BC962F000F6C889 /* LaunchScreen.storyboard */,
+				FC6A57E01BC962F000F6C889 /* Info.plist */,
+				FC6A57D81BC962F000F6C889 /* CrowdFood.xcdatamodeld */,
+			);
+			path = CrowdFood;
+			sourceTree = "<group>";
+		};
+		FC6A57E81BC962F000F6C889 /* CrowdFoodTests */ = {
+			isa = PBXGroup;
+			children = (
+				FC6A57E91BC962F000F6C889 /* CrowdFoodTests.swift */,
+				FC6A57EB1BC962F000F6C889 /* Info.plist */,
+			);
+			path = CrowdFoodTests;
+			sourceTree = "<group>";
+		};
+		FC6A57F31BC962F000F6C889 /* CrowdFoodUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FC6A57F41BC962F000F6C889 /* CrowdFoodUITests.swift */,
+				FC6A57F61BC962F000F6C889 /* Info.plist */,
+			);
+			path = CrowdFoodUITests;
+			sourceTree = "<group>";
+		};
+		FC6A58021BC96A2400F6C889 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FC6A58031BC96A9600F6C889 /* Default-568h@2x.png */,
+				FC6A58041BC96A9600F6C889 /* Museo500-Regular.otf */,
+				FC6A58051BC96A9600F6C889 /* restaurant.mp4 */,
+				FC6A58101BC97F0B00F6C889 /* Future.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		FC6A58091BC96AC900F6C889 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FC6A580A1BC96C0C00F6C889 /* HomeViewController.swift */,
+				FC6A580E1BC97AA700F6C889 /* MapViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FC6A57CD1BC962EF00F6C889 /* CrowdFood */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC6A57F91BC962F000F6C889 /* Build configuration list for PBXNativeTarget "CrowdFood" */;
+			buildPhases = (
+				960721401268DA4E81753E07 /* Check Pods Manifest.lock */,
+				FC6A57CA1BC962EF00F6C889 /* Sources */,
+				FC6A57CB1BC962EF00F6C889 /* Frameworks */,
+				FC6A57CC1BC962EF00F6C889 /* Resources */,
+				091ED5CFD140079C504C1A67 /* Embed Pods Frameworks */,
+				B4FE11EB489C0F8D2BBB99C3 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CrowdFood;
+			productName = CrowdFood;
+			productReference = FC6A57CE1BC962F000F6C889 /* CrowdFood.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FC6A57E41BC962F000F6C889 /* CrowdFoodTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC6A57FC1BC962F000F6C889 /* Build configuration list for PBXNativeTarget "CrowdFoodTests" */;
+			buildPhases = (
+				FC6A57E11BC962F000F6C889 /* Sources */,
+				FC6A57E21BC962F000F6C889 /* Frameworks */,
+				FC6A57E31BC962F000F6C889 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FC6A57E71BC962F000F6C889 /* PBXTargetDependency */,
+			);
+			name = CrowdFoodTests;
+			productName = CrowdFoodTests;
+			productReference = FC6A57E51BC962F000F6C889 /* CrowdFoodTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FC6A57EF1BC962F000F6C889 /* CrowdFoodUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC6A57FF1BC962F000F6C889 /* Build configuration list for PBXNativeTarget "CrowdFoodUITests" */;
+			buildPhases = (
+				FC6A57EC1BC962F000F6C889 /* Sources */,
+				FC6A57ED1BC962F000F6C889 /* Frameworks */,
+				FC6A57EE1BC962F000F6C889 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FC6A57F21BC962F000F6C889 /* PBXTargetDependency */,
+			);
+			name = CrowdFoodUITests;
+			productName = CrowdFoodUITests;
+			productReference = FC6A57F01BC962F000F6C889 /* CrowdFoodUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FC6A57C61BC962EF00F6C889 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Jinyue Xia";
+				TargetAttributes = {
+					FC6A57CD1BC962EF00F6C889 = {
+						CreatedOnToolsVersion = 7.0.1;
+					};
+					FC6A57E41BC962F000F6C889 = {
+						CreatedOnToolsVersion = 7.0.1;
+						TestTargetID = FC6A57CD1BC962EF00F6C889;
+					};
+					FC6A57EF1BC962F000F6C889 = {
+						CreatedOnToolsVersion = 7.0.1;
+						TestTargetID = FC6A57CD1BC962EF00F6C889;
+					};
+				};
+			};
+			buildConfigurationList = FC6A57C91BC962EF00F6C889 /* Build configuration list for PBXProject "CrowdFood" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FC6A57C51BC962EF00F6C889;
+			productRefGroup = FC6A57CF1BC962F000F6C889 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FC6A57CD1BC962EF00F6C889 /* CrowdFood */,
+				FC6A57E41BC962F000F6C889 /* CrowdFoodTests */,
+				FC6A57EF1BC962F000F6C889 /* CrowdFoodUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FC6A57CC1BC962EF00F6C889 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC6A58111BC97F0B00F6C889 /* Future.png in Resources */,
+				FC6A58081BC96A9600F6C889 /* restaurant.mp4 in Resources */,
+				FC6A57DF1BC962F000F6C889 /* LaunchScreen.storyboard in Resources */,
+				FC6A58061BC96A9600F6C889 /* Default-568h@2x.png in Resources */,
+				FC6A57DC1BC962F000F6C889 /* Assets.xcassets in Resources */,
+				FC6A58071BC96A9600F6C889 /* Museo500-Regular.otf in Resources */,
+				FC6A57D71BC962F000F6C889 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC6A57E31BC962F000F6C889 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC6A57EE1BC962F000F6C889 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		091ED5CFD140079C504C1A67 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		960721401268DA4E81753E07 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B4FE11EB489C0F8D2BBB99C3 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FC6A57CA1BC962EF00F6C889 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC6A57DA1BC962F000F6C889 /* CrowdFood.xcdatamodeld in Sources */,
+				FC6A57D21BC962F000F6C889 /* AppDelegate.swift in Sources */,
+				FC6A580B1BC96C0C00F6C889 /* HomeViewController.swift in Sources */,
+				FC6A580F1BC97AA700F6C889 /* MapViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC6A57E11BC962F000F6C889 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC6A57EA1BC962F000F6C889 /* CrowdFoodTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC6A57EC1BC962F000F6C889 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC6A57F51BC962F000F6C889 /* CrowdFoodUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FC6A57E71BC962F000F6C889 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FC6A57CD1BC962EF00F6C889 /* CrowdFood */;
+			targetProxy = FC6A57E61BC962F000F6C889 /* PBXContainerItemProxy */;
+		};
+		FC6A57F21BC962F000F6C889 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FC6A57CD1BC962EF00F6C889 /* CrowdFood */;
+			targetProxy = FC6A57F11BC962F000F6C889 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FC6A57D51BC962F000F6C889 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FC6A57D61BC962F000F6C889 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FC6A57DD1BC962F000F6C889 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FC6A57DE1BC962F000F6C889 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FC6A57F71BC962F000F6C889 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FC6A57F81BC962F000F6C889 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FC6A57FA1BC962F000F6C889 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5DC8D1477EC2B374F54530AD /* Pods.debug.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = CrowdFood/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.ios.jx.CrowdFood;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		FC6A57FB1BC962F000F6C889 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E6B8A45FCA199EEB46E3DB3 /* Pods.release.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = CrowdFood/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.ios.jx.CrowdFood;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		FC6A57FD1BC962F000F6C889 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = CrowdFoodTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.ios.jx.CrowdFoodTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CrowdFood.app/CrowdFood";
+			};
+			name = Debug;
+		};
+		FC6A57FE1BC962F000F6C889 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = CrowdFoodTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.ios.jx.CrowdFoodTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CrowdFood.app/CrowdFood";
+			};
+			name = Release;
+		};
+		FC6A58001BC962F000F6C889 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = CrowdFoodUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.ios.jx.CrowdFoodUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = CrowdFood;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		FC6A58011BC962F000F6C889 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = CrowdFoodUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.ios.jx.CrowdFoodUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = CrowdFood;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FC6A57C91BC962EF00F6C889 /* Build configuration list for PBXProject "CrowdFood" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC6A57F71BC962F000F6C889 /* Debug */,
+				FC6A57F81BC962F000F6C889 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FC6A57F91BC962F000F6C889 /* Build configuration list for PBXNativeTarget "CrowdFood" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC6A57FA1BC962F000F6C889 /* Debug */,
+				FC6A57FB1BC962F000F6C889 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FC6A57FC1BC962F000F6C889 /* Build configuration list for PBXNativeTarget "CrowdFoodTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC6A57FD1BC962F000F6C889 /* Debug */,
+				FC6A57FE1BC962F000F6C889 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FC6A57FF1BC962F000F6C889 /* Build configuration list for PBXNativeTarget "CrowdFoodUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC6A58001BC962F000F6C889 /* Debug */,
+				FC6A58011BC962F000F6C889 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FC6A57D81BC962F000F6C889 /* CrowdFood.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FC6A57D91BC962F000F6C889 /* CrowdFood.xcdatamodel */,
+			);
+			currentVersion = FC6A57D91BC962F000F6C889 /* CrowdFood.xcdatamodel */;
+			path = CrowdFood.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = FC6A57C61BC962EF00F6C889 /* Project object */;
+}
