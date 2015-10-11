@@ -57,6 +57,10 @@ class HomeViewController: VideoSplashViewController, VideoPlayerEventDelegate {
     self.navigationController?.setToolbarHidden(false, animated: true)
   }
   
+  @IBAction func tapEnter(sender: UIButton) {
+    self.performSegueWithIdentifier("HomeToMap", sender: self)
+  }
+  
   func videoDidEnd() {
     self.performSegueWithIdentifier("HomeToMap", sender: self)
   }

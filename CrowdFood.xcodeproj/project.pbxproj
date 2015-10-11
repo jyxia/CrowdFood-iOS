@@ -19,9 +19,14 @@
 		FC6A58071BC96A9600F6C889 /* Museo500-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = FC6A58041BC96A9600F6C889 /* Museo500-Regular.otf */; settings = {ASSET_TAGS = (); }; };
 		FC6A58081BC96A9600F6C889 /* restaurant.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = FC6A58051BC96A9600F6C889 /* restaurant.mp4 */; settings = {ASSET_TAGS = (); }; };
 		FC6A580B1BC96C0C00F6C889 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6A580A1BC96C0C00F6C889 /* HomeViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		FC6A580D1BC9783400F6C889 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC6A580C1BC9783400F6C889 /* MapKit.framework */; };
 		FC6A580F1BC97AA700F6C889 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6A580E1BC97AA700F6C889 /* MapViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		FC6A58111BC97F0B00F6C889 /* Future.png in Resources */ = {isa = PBXBuildFile; fileRef = FC6A58101BC97F0B00F6C889 /* Future.png */; settings = {ASSET_TAGS = (); }; };
+		FC6A58121BC9906B00F6C889 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC6A580C1BC9783400F6C889 /* MapKit.framework */; };
+		FC6E01D41BC9F77C0062A9E9 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6E01D31BC9F77C0062A9E9 /* Restaurant.swift */; settings = {ASSET_TAGS = (); }; };
+		FC6E01D61BC9F8550062A9E9 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6E01D51BC9F8550062A9E9 /* API.swift */; settings = {ASSET_TAGS = (); }; };
+		FC85780C1BC9E40300964125 /* ReportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC85780B1BC9E40300964125 /* ReportTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
+		FC85780E1BC9E54600964125 /* ReportsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC85780D1BC9E54600964125 /* ReportsTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		FC9FEA0F1BC9B1B500363A62 /* AddReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9FEA0E1BC9B1B500363A62 /* AddReportViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +69,11 @@
 		FC6A580C1BC9783400F6C889 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		FC6A580E1BC97AA700F6C889 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		FC6A58101BC97F0B00F6C889 /* Future.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Future.png; sourceTree = "<group>"; };
+		FC6E01D31BC9F77C0062A9E9 /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+		FC6E01D51BC9F8550062A9E9 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		FC85780B1BC9E40300964125 /* ReportTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportTableViewCell.swift; sourceTree = "<group>"; };
+		FC85780D1BC9E54600964125 /* ReportsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportsTableViewController.swift; sourceTree = "<group>"; };
+		FC9FEA0E1BC9B1B500363A62 /* AddReportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddReportViewController.swift; sourceTree = "<group>"; };
 		FCD6E838F1DAADCADC71A012 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -72,7 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC6A580D1BC9783400F6C889 /* MapKit.framework in Frameworks */,
+				FC6A58121BC9906B00F6C889 /* MapKit.framework in Frameworks */,
 				17A22E736C4E326727239D4A /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -181,10 +191,39 @@
 		FC6A58091BC96AC900F6C889 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				FC6E01D21BC9F7450062A9E9 /* Model */,
+				FC6E01D11BC9F2670062A9E9 /* API */,
+				FC85780A1BC9E3DA00964125 /* Cell */,
 				FC6A580A1BC96C0C00F6C889 /* HomeViewController.swift */,
 				FC6A580E1BC97AA700F6C889 /* MapViewController.swift */,
+				FC9FEA0E1BC9B1B500363A62 /* AddReportViewController.swift */,
+				FC85780D1BC9E54600964125 /* ReportsTableViewController.swift */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		FC6E01D11BC9F2670062A9E9 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				FC6E01D51BC9F8550062A9E9 /* API.swift */,
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
+		FC6E01D21BC9F7450062A9E9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FC6E01D31BC9F77C0062A9E9 /* Restaurant.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		FC85780A1BC9E3DA00964125 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				FC85780B1BC9E40300964125 /* ReportTableViewCell.swift */,
+			);
+			name = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -373,9 +412,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC6A57DA1BC962F000F6C889 /* CrowdFood.xcdatamodeld in Sources */,
+				FC85780E1BC9E54600964125 /* ReportsTableViewController.swift in Sources */,
 				FC6A57D21BC962F000F6C889 /* AppDelegate.swift in Sources */,
 				FC6A580B1BC96C0C00F6C889 /* HomeViewController.swift in Sources */,
+				FC6E01D41BC9F77C0062A9E9 /* Restaurant.swift in Sources */,
+				FC85780C1BC9E40300964125 /* ReportTableViewCell.swift in Sources */,
 				FC6A580F1BC97AA700F6C889 /* MapViewController.swift in Sources */,
+				FC6E01D61BC9F8550062A9E9 /* API.swift in Sources */,
+				FC9FEA0F1BC9B1B500363A62 /* AddReportViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -515,6 +559,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5DC8D1477EC2B374F54530AD /* Pods.debug.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CrowdFood/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -527,6 +572,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2E6B8A45FCA199EEB46E3DB3 /* Pods.release.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CrowdFood/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
