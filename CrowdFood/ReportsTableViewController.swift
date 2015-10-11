@@ -7,58 +7,83 @@
 //
 
 import UIKit
+import Alamofire
 
 class ReportsTableViewController: UITableViewController {
-  
-  var reports: [Report]?
+  var restaurantId: String!
+  var reports = [Report]()
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    
-      // Uncomment the following line to preserve selection between presentations
-      // self.clearsSelectionOnViewWillAppear = false
+  }
 
-      // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-      // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-    }
-
-    override func didReceiveMemoryWarning() {
-      super.didReceiveMemoryWarning()
-    }
-
-    // MARK: - Table view data source
-
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-      return 1
-    }
-
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-      return 1
-    }
+  override func viewWillAppear(animated: Bool) {
+    super.viewWillAppear(animated)
+    retrieveReports()
+  }
   
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reportcell", forIndexPath: indexPath)
-
-
-        return cell
-    }
+  override func viewWillDisappear(animated: Bool) {
+    super.viewWillDisappear(animated)
+    self.navigationController?.setNavigationBarHidden(true, animated: true)
+    self.navigationController?.setToolbarHidden(false, animated: true)
+  }
   
+  override func didReceiveMemoryWarning() {
+    super.didReceiveMemoryWarning()
+  }
 
-    /*
-    // MARK: - Navigation
+  override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    return 1
+  }
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+  override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return reports.count
+  }
+
+  override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    let cell = tableView.dequeueReusableCellWithIdentifier("reportcell", forIndexPath: indexPath) as! ReportTableViewCell
+    cell.userLabel.text = "submitted by " + self.reports[indexPath.row].user
+    cell.waitingTimeLabel.text = String(self.reports[indexPath.row].waiting) + " mins waiting"
+    cell.reportTimeLabel.text = String(self.reports[indexPath.row].elapsedTime) + " mins ago"
+    cell.confirmsLabel.text = String(self.reports[indexPath.row].confirms)
+    return cell
+  }
+
+  func retrieveReports() {
+    let api = API().getRestaurantReportsAPI(restaurantId)
+    Alamofire.request(.GET, api)
+      .responseJSON {
+        response in
+        if let json = response.result.value {
+          let data = json["data"] as! NSDictionary
+          let attributes = data["attribute"] as! NSDictionary
+          let reports = attributes["reports"] as! NSArray
+          for report in reports {
+            let newReport = Report()
+            newReport.waiting = report["waiting"] as! Int
+            newReport.confirms = report["confirm"] as! Int
+            newReport.user = report["userId"] as! String
+            newReport.elapsedTime = report["timeSubmitted"] as! Int
+            // print(newReport.toString())
+            self.reports.append(newReport)
+            self.tableView.reloadData()
+          }
+          
+        }
     }
-    */
+  }
+
   
   class Report {
     var waiting: Int!
     var user: String!
-    var reportTime: Int!
+    var elapsedTime: Int!
     var confirms: Int!
+    var photoURL: String!
+    
+    func toString() -> String {
+      return "[user: \(user), waiting: \(waiting), confirms: \(confirms), elapseTime: \(elapsedTime)]"
+    }
   }
 
 }

@@ -10,9 +10,12 @@ import UIKit
 import MapKit
 import Alamofire
 
-class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
+class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
   
   private let locationManager = CLLocationManager()
+  private var restaurantPoints = [RestaurantPointAnnotation]()
+  private var reportTime: String!
+  private var crowdImage: UIImage!
   
   @IBOutlet weak var cfMapView: MKMapView! {
     didSet {
@@ -62,14 +65,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     let span: MKCoordinateSpan = MKCoordinateSpanMake(latDelta, lonDelta)
     let region: MKCoordinateRegion = MKCoordinateRegionMake(location, span)
     cfMapView.setRegion(region, animated: false)
-    // Drop a pin
-    let dropPin = MKPointAnnotation()
-    dropPin.coordinate = location
-    dropPin.title = "Jade Palace"
-    dropPin.subtitle = "5 min waiting"
-    cfMapView.removeAnnotations(cfMapView.annotations)
-    cfMapView.addAnnotation(dropPin)
-    //    cfMapView.showAnnotations(dropPin, animated: true)
+//    cfMapView.showsUserLocation = true
   }
   
   func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
@@ -80,11 +76,33 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
       pinView!.leftCalloutAccessoryView = UIImageView(frame: CGRectMake(0, 0, 50, 50))
       pinView!.leftCalloutAccessoryView?.contentMode = UIViewContentMode.ScaleAspectFit
   
-      if #available(iOS 9, *) {
-        pinView!.pinTintColor = UIColor.greenColor()
-      } else {
-        pinView!.pinColor = .Green
+      if let rAnnotation = annotation as? RestaurantPointAnnotation {
+        if rAnnotation.waiting <= 5 {
+          pinView!.pinColor = .Green
+        }
+        
+        if rAnnotation.waiting > 5 && rAnnotation.waiting < 10 {
+          pinView!.pinColor = .Purple
+        }
       }
+      
+      if annotation.isKindOfClass(MKUserLocation) {
+        pinView?.canShowCallout = false
+        return nil
+      }
+      
+//      if #available(iOS 9, *) {
+//      } else {
+//        if let rAnnotation = annotation as? RestaurantPointAnnotation {
+//          if rAnnotation.waiting <= 5 {
+//            pinView!.pinColor = .Green
+//          }
+//          
+//          if rAnnotation.waiting > 5 && rAnnotation.waiting < 10 {
+//            pinView!.pinColor = .Purple
+//          }
+//        }
+//      }
       
     } else {
       pinView!.annotation = annotation
@@ -109,13 +127,20 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     // self.performSegueWithIdentifier("AddReportSegue", sender: self)
     
     let alertController = UIAlertController(title: "Estimated Time", message: nil, preferredStyle: .ActionSheet)
-    let levelOne = UIAlertAction(title: "Less than 5 minute", style: .Default, handler: { (action) -> Void in
+    let levelOne = UIAlertAction(title: "5 minute", style: .Default, handler: { (action) -> Void in
+      self.reportTime = "5"
+      self.addReport()
     })
-    let levelTwo = UIAlertAction(title: "Less than 10 minute", style: .Default, handler: { (action) -> Void in
+    let levelTwo = UIAlertAction(title: "10 minute", style: .Default, handler: { (action) -> Void in
+      self.reportTime = "10"
+      self.addReport()
     })
-    let levelThree = UIAlertAction(title: "More than 15 minute", style: .Default, handler: { (action) -> Void in
+    let levelThree = UIAlertAction(title: "15 minute", style: .Default, handler: { (action) -> Void in
+      self.reportTime = "15"
+      self.addReport()
     })
     let delete = UIAlertAction(title: "Add a photo", style: .Destructive) { (action) -> Void in
+      self.openCamera()
     }
     let cancel = UIAlertAction(title: "Cancel", style: .Cancel, handler: { (action) -> Void in
     })
@@ -136,9 +161,22 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     }
     
     if segue.identifier == "MapToReports" {
+      self.navigationController?.setToolbarHidden(true, animated: true)
       self.navigationController?.setNavigationBarHidden(false, animated: true)
       if let destVC = segue.destinationViewController as? ReportsTableViewController {
-        destVC.reports = []
+        if let annotationView = sender as? MKAnnotationView {
+          if let annotation = annotationView.annotation as? RestaurantPointAnnotation {
+            destVC.restaurantId = annotation.id
+          }
+        }
+      }
+    }
+    
+    if segue.identifier ==  "MapToPhoto" {
+      self.navigationController?.setToolbarHidden(true, animated: true)
+      self.navigationController?.setNavigationBarHidden(false, animated: true)
+      if let destVC = segue.destinationViewController as? AddPhotoReportViewController {
+        destVC.photo = crowdImage
       }
     }
   }
@@ -153,21 +191,92 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         if let json = response.result.value {
           let data = json["data"] as! NSArray
           for restaurant in data {
-            let newRestaurant = Restaurant()
+            let newRestaurant = RestaurantPointAnnotation()
             let id = restaurant["_id"] as! String
             newRestaurant.id = id
             let attributes = restaurant["attribute"] as! NSDictionary
-            newRestaurant.name = attributes["name"] as! String
+            newRestaurant.title = attributes["name"] as? String
             newRestaurant.waiting = attributes["waiting"] as! Int
+            newRestaurant.subtitle = "\(newRestaurant.waiting) min waiting"
             let location = attributes["loc"] as! NSDictionary
             let coordinates = location["coordinates"] as! NSArray
             let latitude = coordinates[0] as! Double
             let longitude = coordinates[1] as! Double
             let geoLocation = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
-            newRestaurant.coordinates = geoLocation
-            print(newRestaurant.toString())
+            newRestaurant.coordinate = geoLocation
+            self.restaurantPoints.append(newRestaurant)
           }
+          
+          self.cfMapView.removeAnnotations(self.cfMapView.annotations)
+          self.cfMapView.addAnnotations(self.restaurantPoints)
+          self.cfMapView.showAnnotations(self.restaurantPoints, animated: true)
         }
+    }
+  }
+  
+  
+  
+  //----------------------------------------------------------------------------------------------------------------------
+  // Pick from camera or gallary
+  //----------------------------------------------------------------------------------------------------------------------
+  func openCamera() {
+    let picker:UIImagePickerController = UIImagePickerController()
+    picker.delegate = self
+    if (UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)) {
+      picker.sourceType = UIImagePickerControllerSourceType.Camera
+      self.presentViewController(picker, animated: true, completion: nil)
+    } else {
+      openGallary(picker)
+    }
+  }
+  
+  func openGallary(picker: UIImagePickerController!) {
+    picker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+    if UIDevice.currentDevice().userInterfaceIdiom == .Phone {
+      self.presentViewController(picker, animated: true, completion: nil)
+    }
+  }
+  
+  func imagePickerControllerDidCancel(picker: UIImagePickerController) {
+    picker.dismissViewControllerAnimated(true, completion: nil)
+  }
+  
+  // after picking or taking a photo didFinishPickingMediaWithInfo
+  func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+    picker.dismissViewControllerAnimated(true, completion: nil)
+    crowdImage = info[UIImagePickerControllerOriginalImage] as? UIImage
+    self.performSegueWithIdentifier("MapToPhoto", sender: self)
+  }
+  
+  //----------------------------------------------------------------------------------------------------------------------
+  // APIs
+  //----------------------------------------------------------------------------------------------------------------------
+  func addReport() {
+    let api = API()
+    let currentLocationId = "5619f748e4b0789ae18730d1"
+    let apiURL = api.postRestaurantReportAPI(currentLocationId)
+    let parameters = [
+      "userId": "Jinyue",
+      "waiting": 5
+    ]
+    
+    Alamofire.request(.POST, apiURL, parameters: parameters, encoding: .JSON)
+      .responseJSON {
+        response in
+        if let json = response.result.value {
+          print(json)
+        }
+      }
+
+  }
+  
+  class RestaurantPointAnnotation: MKPointAnnotation {
+    
+    var id: String!
+    var waiting: Int!
+
+    func toString() -> String {
+      return "[id: \(self.id), name: \(self.title), waiting: \(self.waiting), coordinates: \(self.coordinate)]"
     }
   }
   

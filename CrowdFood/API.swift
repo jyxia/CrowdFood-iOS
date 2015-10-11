@@ -19,4 +19,12 @@ class API {
   func getListRestaurantsAPI() -> String {
     return root + "restaurants/short/"
   }
+  
+  func getRestaurantReportsAPI(restaurantId: String) -> String {
+    return root + "restaurants/" + restaurantId
+  }
+  
+  func postRestaurantReportAPI(restaurantId: String) -> String {
+    return root + "restaurants/" + restaurantId
+  }
 }
