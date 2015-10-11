@@ -109,13 +109,18 @@ class AddPhotoReportViewController: UIViewController, UIPickerViewDelegate, CLUp
     let progress = Float(totalBytesWritten) / Float(totalBytesExpectedToWrite) as Float
     self.uploadProgressView.setProgress(progress, animated: false)
     print("uploading to cloudinary... wait! \(progress * 100)%")
+    if progress == 1 {
+      self.navigationController?.popViewControllerAnimated(true)
+    }
   }
   
   func sendPhotoReport(url: String) {
     let api = API()
     let currentLocationId = "5619f748e4b0789ae18730d1"
     let apiURL = api.postRestaurantReportAPI(currentLocationId)
-    let waiting = String(pickedMintues)
+    let waitingTime = self.pickerData[self.timePicker.selectedRowInComponent(0)]
+    let waiting = String(waitingTime)
+    
     let parameters = [
       "userId": "Jinyue",
       "photoUrl": url,

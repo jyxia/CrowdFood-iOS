@@ -46,6 +46,11 @@ class ReportsTableViewController: UITableViewController {
     cell.waitingTimeLabel.text = String(self.reports[indexPath.row].waiting) + " mins waiting"
     cell.reportTimeLabel.text = String(self.reports[indexPath.row].elapsedTime) + " mins ago"
     cell.confirmsLabel.text = String(self.reports[indexPath.row].confirms)
+    if let url = self.reports[indexPath.row].photoURL {
+      loadImage(url, imageView: cell.imageView!)
+    } else {
+      cell.imageView!.image = UIImage(named: "Future")
+    }
     return cell
   }
 
@@ -64,6 +69,10 @@ class ReportsTableViewController: UITableViewController {
             newReport.confirms = report["confirm"] as! Int
             newReport.user = report["userId"] as! String
             newReport.elapsedTime = report["timeSubmitted"] as! Int
+            if let url = report["photoUrl"] as? String {
+              newReport.photoURL = self.createThumbCloudinaryLink(url, width: 70, height: 70)
+              print(newReport.photoURL)
+            }
             // print(newReport.toString())
             self.reports.append(newReport)
             self.tableView.reloadData()
@@ -72,7 +81,34 @@ class ReportsTableViewController: UITableViewController {
         }
     }
   }
+  
+  func loadImage(url: String, imageView: UIImageView) {
+    let imageURL = NSURL(string: url)
+    if let imageData = NSData(contentsOfURL: imageURL!) {
+      if let image = UIImage(data: imageData) {
+        imageView.image = image
+      }
+    }
+  }
 
+  func createThumbCloudinaryLink(url: String, width: Int, height: Int) -> String {
+    let urlArr = url.characters.split{$0 == "/" }.map(String.init)
+    print(urlArr)
+    var newURL = "https:"
+    for str in urlArr {
+      if str == "https:" {
+        newURL += "/"
+      } else {
+        newURL += "/" + str
+      }
+      if str == "upload" {
+        // newURL += "/w_600,h_600,c_fit"
+        newURL += "/w_\(width),h_\(height),c_scale"
+      }
+    }
+    // println("new url is " + newURL)
+    return newURL
+  }
   
   class Report {
     var waiting: Int!

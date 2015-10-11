@@ -177,6 +177,14 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     }
   }
   
+  @IBAction func tapRefresh(sender: UIBarButtonItem) {
+    self.retrieveRestaurants()
+  }
+  
+  @IBAction func tapCurrentLocation(sender: UIBarButtonItem) {
+    self.locationManager.startUpdatingLocation()
+  }
+  
   func retrieveRestaurants() {
     let api = API()
     let apiURL = api.getListRestaurantsAPI()
@@ -209,8 +217,6 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         }
     }
   }
-  
-  
   
   //----------------------------------------------------------------------------------------------------------------------
   // Pick from camera or gallary
