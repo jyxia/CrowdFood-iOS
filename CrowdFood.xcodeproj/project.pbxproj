@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		17A22E736C4E326727239D4A /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCD6E838F1DAADCADC71A012 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		FC1A96751BCA5180009D0315 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC6A580C1BC9783400F6C889 /* MapKit.framework */; };
+		FC1A96771BCA5839009D0315 /* libCloudinary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FC1A96761BCA5839009D0315 /* libCloudinary.a */; settings = {ASSET_TAGS = (); }; };
 		FC6A57D21BC962F000F6C889 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6A57D11BC962F000F6C889 /* AppDelegate.swift */; };
 		FC6A57D71BC962F000F6C889 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC6A57D51BC962F000F6C889 /* Main.storyboard */; };
 		FC6A57DA1BC962F000F6C889 /* CrowdFood.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FC6A57D81BC962F000F6C889 /* CrowdFood.xcdatamodeld */; };
 		FC6A57DC1BC962F000F6C889 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC6A57DB1BC962F000F6C889 /* Assets.xcassets */; };
 		FC6A57DF1BC962F000F6C889 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC6A57DD1BC962F000F6C889 /* LaunchScreen.storyboard */; };
-		FC6A57EA1BC962F000F6C889 /* CrowdFoodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6A57E91BC962F000F6C889 /* CrowdFoodTests.swift */; };
 		FC6A57F51BC962F000F6C889 /* CrowdFoodUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6A57F41BC962F000F6C889 /* CrowdFoodUITests.swift */; };
 		FC6A58061BC96A9600F6C889 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FC6A58031BC96A9600F6C889 /* Default-568h@2x.png */; settings = {ASSET_TAGS = (); }; };
 		FC6A58071BC96A9600F6C889 /* Museo500-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = FC6A58041BC96A9600F6C889 /* Museo500-Regular.otf */; settings = {ASSET_TAGS = (); }; };
@@ -21,7 +22,6 @@
 		FC6A580B1BC96C0C00F6C889 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6A580A1BC96C0C00F6C889 /* HomeViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		FC6A580F1BC97AA700F6C889 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6A580E1BC97AA700F6C889 /* MapViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		FC6A58111BC97F0B00F6C889 /* Future.png in Resources */ = {isa = PBXBuildFile; fileRef = FC6A58101BC97F0B00F6C889 /* Future.png */; settings = {ASSET_TAGS = (); }; };
-		FC6A58121BC9906B00F6C889 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC6A580C1BC9783400F6C889 /* MapKit.framework */; };
 		FC6E01D61BC9F8550062A9E9 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6E01D51BC9F8550062A9E9 /* API.swift */; settings = {ASSET_TAGS = (); }; };
 		FC85780C1BC9E40300964125 /* ReportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC85780B1BC9E40300964125 /* ReportTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
 		FC85780E1BC9E54600964125 /* ReportsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC85780D1BC9E54600964125 /* ReportsTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
@@ -30,13 +30,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		FC6A57E61BC962F000F6C889 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FC6A57C61BC962EF00F6C889 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FC6A57CD1BC962EF00F6C889;
-			remoteInfo = CrowdFood;
-		};
 		FC6A57F11BC962F000F6C889 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FC6A57C61BC962EF00F6C889 /* Project object */;
@@ -49,6 +42,13 @@
 /* Begin PBXFileReference section */
 		2E6B8A45FCA199EEB46E3DB3 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		5DC8D1477EC2B374F54530AD /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		FC1A96761BCA5839009D0315 /* libCloudinary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libCloudinary.a; sourceTree = "<group>"; };
+		FC1A96791BCA5AFE009D0315 /* CLCloudinary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLCloudinary.h; sourceTree = "<group>"; };
+		FC1A967A1BCA5AFE009D0315 /* CLEagerTransformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLEagerTransformation.h; sourceTree = "<group>"; };
+		FC1A967B1BCA5AFE009D0315 /* Cloudinary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cloudinary.h; sourceTree = "<group>"; };
+		FC1A967C1BCA5AFE009D0315 /* CLTransformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLTransformation.h; sourceTree = "<group>"; };
+		FC1A967D1BCA5AFE009D0315 /* CLUploader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLUploader.h; sourceTree = "<group>"; };
+		FC1A967F1BCA5EA2009D0315 /* CF_Bridging_Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CF_Bridging_Header.h; sourceTree = "<group>"; };
 		FC6A57CE1BC962F000F6C889 /* CrowdFood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrowdFood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC6A57D11BC962F000F6C889 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC6A57D61BC962F000F6C889 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -56,7 +56,6 @@
 		FC6A57DB1BC962F000F6C889 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC6A57DE1BC962F000F6C889 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC6A57E01BC962F000F6C889 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FC6A57E51BC962F000F6C889 /* CrowdFoodTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CrowdFoodTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC6A57E91BC962F000F6C889 /* CrowdFoodTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrowdFoodTests.swift; sourceTree = "<group>"; };
 		FC6A57EB1BC962F000F6C889 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC6A57F01BC962F000F6C889 /* CrowdFoodUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CrowdFoodUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,15 +81,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC6A58121BC9906B00F6C889 /* MapKit.framework in Frameworks */,
+				FC1A96771BCA5839009D0315 /* libCloudinary.a in Frameworks */,
+				FC1A96751BCA5180009D0315 /* MapKit.framework in Frameworks */,
 				17A22E736C4E326727239D4A /* Pods.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FC6A57E21BC962F000F6C889 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,9 +115,23 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		FC1A96781BCA5AFE009D0315 /* Cloudinary */ = {
+			isa = PBXGroup;
+			children = (
+				FC1A96791BCA5AFE009D0315 /* CLCloudinary.h */,
+				FC1A967A1BCA5AFE009D0315 /* CLEagerTransformation.h */,
+				FC1A967B1BCA5AFE009D0315 /* Cloudinary.h */,
+				FC1A967C1BCA5AFE009D0315 /* CLTransformation.h */,
+				FC1A967D1BCA5AFE009D0315 /* CLUploader.h */,
+				FC1A967F1BCA5EA2009D0315 /* CF_Bridging_Header.h */,
+			);
+			path = Cloudinary;
+			sourceTree = "<group>";
+		};
 		FC6A57C51BC962EF00F6C889 = {
 			isa = PBXGroup;
 			children = (
+				FC1A96761BCA5839009D0315 /* libCloudinary.a */,
 				FC6A57D01BC962F000F6C889 /* CrowdFood */,
 				FC6A57E81BC962F000F6C889 /* CrowdFoodTests */,
 				FC6A57F31BC962F000F6C889 /* CrowdFoodUITests */,
@@ -138,7 +145,6 @@
 			isa = PBXGroup;
 			children = (
 				FC6A57CE1BC962F000F6C889 /* CrowdFood.app */,
-				FC6A57E51BC962F000F6C889 /* CrowdFoodTests.xctest */,
 				FC6A57F01BC962F000F6C889 /* CrowdFoodUITests.xctest */,
 			);
 			name = Products;
@@ -147,6 +153,7 @@
 		FC6A57D01BC962F000F6C889 /* CrowdFood */ = {
 			isa = PBXGroup;
 			children = (
+				FC1A96781BCA5AFE009D0315 /* Cloudinary */,
 				FC6A58091BC96AC900F6C889 /* Controllers */,
 				FC6A58021BC96A2400F6C889 /* Resources */,
 				FC6A57D11BC962F000F6C889 /* AppDelegate.swift */,
@@ -249,24 +256,6 @@
 			productReference = FC6A57CE1BC962F000F6C889 /* CrowdFood.app */;
 			productType = "com.apple.product-type.application";
 		};
-		FC6A57E41BC962F000F6C889 /* CrowdFoodTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FC6A57FC1BC962F000F6C889 /* Build configuration list for PBXNativeTarget "CrowdFoodTests" */;
-			buildPhases = (
-				FC6A57E11BC962F000F6C889 /* Sources */,
-				FC6A57E21BC962F000F6C889 /* Frameworks */,
-				FC6A57E31BC962F000F6C889 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				FC6A57E71BC962F000F6C889 /* PBXTargetDependency */,
-			);
-			name = CrowdFoodTests;
-			productName = CrowdFoodTests;
-			productReference = FC6A57E51BC962F000F6C889 /* CrowdFoodTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		FC6A57EF1BC962F000F6C889 /* CrowdFoodUITests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FC6A57FF1BC962F000F6C889 /* Build configuration list for PBXNativeTarget "CrowdFoodUITests" */;
@@ -298,10 +287,6 @@
 						CreatedOnToolsVersion = 7.0.1;
 						DevelopmentTeam = D47328566D;
 					};
-					FC6A57E41BC962F000F6C889 = {
-						CreatedOnToolsVersion = 7.0.1;
-						TestTargetID = FC6A57CD1BC962EF00F6C889;
-					};
 					FC6A57EF1BC962F000F6C889 = {
 						CreatedOnToolsVersion = 7.0.1;
 						TestTargetID = FC6A57CD1BC962EF00F6C889;
@@ -322,7 +307,6 @@
 			projectRoot = "";
 			targets = (
 				FC6A57CD1BC962EF00F6C889 /* CrowdFood */,
-				FC6A57E41BC962F000F6C889 /* CrowdFoodTests */,
 				FC6A57EF1BC962F000F6C889 /* CrowdFoodUITests */,
 			);
 		};
@@ -340,13 +324,6 @@
 				FC6A57DC1BC962F000F6C889 /* Assets.xcassets in Resources */,
 				FC6A58071BC96A9600F6C889 /* Museo500-Regular.otf in Resources */,
 				FC6A57D71BC962F000F6C889 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FC6A57E31BC962F000F6C889 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,14 +401,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FC6A57E11BC962F000F6C889 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FC6A57EA1BC962F000F6C889 /* CrowdFoodTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		FC6A57EC1BC962F000F6C889 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -443,11 +412,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		FC6A57E71BC962F000F6C889 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FC6A57CD1BC962EF00F6C889 /* CrowdFood */;
-			targetProxy = FC6A57E61BC962F000F6C889 /* PBXContainerItemProxy */;
-		};
 		FC6A57F21BC962F000F6C889 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = FC6A57CD1BC962EF00F6C889 /* CrowdFood */;
@@ -511,7 +475,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -549,7 +513,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -565,8 +529,20 @@
 				INFOPLIST_FILE = CrowdFood/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"Alamofire\"",
+					"-framework",
+					"\"VideoSplash\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = org.ios.jx.CrowdFood;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = CrowdFood/Cloudinary/CF_Bridging_Header.h;
 			};
 			name = Debug;
 		};
@@ -579,32 +555,20 @@
 				INFOPLIST_FILE = CrowdFood/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"Alamofire\"",
+					"-framework",
+					"\"VideoSplash\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = org.ios.jx.CrowdFood;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		FC6A57FD1BC962F000F6C889 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = CrowdFoodTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = org.ios.jx.CrowdFoodTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "";
-			};
-			name = Debug;
-		};
-		FC6A57FE1BC962F000F6C889 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = CrowdFoodTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = org.ios.jx.CrowdFoodTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "";
+				SWIFT_OBJC_BRIDGING_HEADER = CrowdFood/Cloudinary/CF_Bridging_Header.h;
 			};
 			name = Release;
 		};
@@ -649,15 +613,6 @@
 			buildConfigurations = (
 				FC6A57FA1BC962F000F6C889 /* Debug */,
 				FC6A57FB1BC962F000F6C889 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		FC6A57FC1BC962F000F6C889 /* Build configuration list for PBXNativeTarget "CrowdFoodTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				FC6A57FD1BC962F000F6C889 /* Debug */,
-				FC6A57FE1BC962F000F6C889 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

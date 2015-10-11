@@ -14,7 +14,6 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
   
   private let locationManager = CLLocationManager()
   private var restaurantPoints = [RestaurantPointAnnotation]()
-  private var reportTime: String!
   private var crowdImage: UIImage!
   
   @IBOutlet weak var cfMapView: MKMapView! {
@@ -128,16 +127,13 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     
     let alertController = UIAlertController(title: "Estimated Time", message: nil, preferredStyle: .ActionSheet)
     let levelOne = UIAlertAction(title: "5 minute", style: .Default, handler: { (action) -> Void in
-      self.reportTime = "5"
-      self.addReport()
+      self.addTimeReport("5")
     })
     let levelTwo = UIAlertAction(title: "10 minute", style: .Default, handler: { (action) -> Void in
-      self.reportTime = "10"
-      self.addReport()
+      self.addTimeReport("10")
     })
     let levelThree = UIAlertAction(title: "15 minute", style: .Default, handler: { (action) -> Void in
-      self.reportTime = "15"
-      self.addReport()
+      self.addTimeReport("15")
     })
     let delete = UIAlertAction(title: "Add a photo", style: .Destructive) { (action) -> Void in
       self.openCamera()
@@ -251,13 +247,13 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
   //----------------------------------------------------------------------------------------------------------------------
   // APIs
   //----------------------------------------------------------------------------------------------------------------------
-  func addReport() {
+  func addTimeReport(reportTime: String) {
     let api = API()
     let currentLocationId = "5619f748e4b0789ae18730d1"
     let apiURL = api.postRestaurantReportAPI(currentLocationId)
     let parameters = [
       "userId": "Jinyue",
-      "waiting": 5
+      "waiting": reportTime
     ]
     
     Alamofire.request(.POST, apiURL, parameters: parameters, encoding: .JSON)
