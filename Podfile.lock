@@ -1,0 +1,16 @@
+PODS:
+  - Alamofire (3.0.0)
+  - Cloudinary (1.0.14)
+  - VideoSplash (1.0.6)
+
+DEPENDENCIES:
+  - Alamofire (~> 3.0)
+  - Cloudinary (~> 1.0.14)
+  - VideoSplash
+
+SPEC CHECKSUMS:
+  Alamofire: b61782387f81bcc538a0284cf2bb5d7995cd0a80
+  Cloudinary: b07e14313bcc3a47418ea47e1c4020cb70518446
+  VideoSplash: 1aa422feb2067c5a5879d94fbae69e8a56e9a529
+
+COCOAPODS: 0.38.2

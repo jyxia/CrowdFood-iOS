@@ -14,8 +14,8 @@ class AddReportViewController: UIViewController {
   @IBOutlet weak var fifteenBtn: UIButton!
   
   override func viewDidLoad() {
-      super.viewDidLoad()
-      // Do any additional setup after loading the view.
+    super.viewDidLoad()
+    // Do any additional setup after loading the view.
     let visualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .Light)) as UIVisualEffectView
     visualEffectView.frame = addphotoButton.bounds
     addphotoButton.addSubview(visualEffectView)
@@ -23,18 +23,6 @@ class AddReportViewController: UIViewController {
     let visualEffectView2 = UIVisualEffectView(effect: UIBlurEffect(style: .Light)) as UIVisualEffectView
     visualEffectView2.frame = fifteenBtn.bounds
     fifteenBtn.addSubview(visualEffectView2)
-    
-//    let doneButton = UIBarButtonItem(barButtonSystemItem: .Done, target: self, action: "buttonDone")
-//    self.navigationController?.navigationItem.rightBarButtonItem = doneButton
-  }
-
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
-  }
-
-  func buttonDone() {
-    
   }
   
   @IBAction func addphoto(sender: AnyObject) {

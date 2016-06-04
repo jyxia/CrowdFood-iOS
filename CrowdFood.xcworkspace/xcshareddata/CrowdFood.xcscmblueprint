@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "1123D323BBA2CE082E3A1C566EFF79025EC66CC9",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "E3D1F16986854D3C9DC0C8A07CC6C9CD3C122FCE" : 0,
+    "1123D323BBA2CE082E3A1C566EFF79025EC66CC9" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "2EF61ED2-1E6A-4A96-80CA-A1B45344F4B2",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "E3D1F16986854D3C9DC0C8A07CC6C9CD3C122FCE" : "",
+    "1123D323BBA2CE082E3A1C566EFF79025EC66CC9" : "CrowdFood\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "CrowdFood",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "CrowdFood.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/jyxia\/CrowdFood-iOS.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "1123D323BBA2CE082E3A1C566EFF79025EC66CC9"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/jyxia\/nostalgic-pluto-ios.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E3D1F16986854D3C9DC0C8A07CC6C9CD3C122FCE"
+    }
+  ]
+}

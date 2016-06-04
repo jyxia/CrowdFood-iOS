@@ -11,6 +11,7 @@ import Foundation
 class API {
 
   var root: String
+  static let sharedInstance = API()
   
   init() {
     self.root = "http://crowdfood.mybluemix.net/api/"

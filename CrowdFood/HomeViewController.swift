@@ -11,8 +11,6 @@ import VideoSplash
 
 class HomeViewController: VideoSplashViewController, VideoPlayerEventDelegate {
   
-//  @IBOutlet weak var enterButton: UIButton!
-  
   @IBOutlet weak var enterBtn: UIButton!
   
   override func viewDidLoad() {
@@ -28,7 +26,6 @@ class HomeViewController: VideoSplashViewController, VideoPlayerEventDelegate {
     self.contentURL = url
     self.sound = false
     self.eventDelegate = self
-    
     enterBtn.backgroundColor = UIColor.clearColor()
     enterBtn.layer.cornerRadius = 5
     enterBtn.layer.borderWidth = 1
@@ -40,8 +37,6 @@ class HomeViewController: VideoSplashViewController, VideoPlayerEventDelegate {
     text.textColor = UIColor.whiteColor()
     text.text = "Crowd Food"
     view.addSubview(text)
-    
-    
   }
   
   override func viewDidAppear(animated: Bool) {

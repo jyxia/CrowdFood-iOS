@@ -9,24 +9,29 @@
 /* Begin PBXBuildFile section */
 		17A22E736C4E326727239D4A /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCD6E838F1DAADCADC71A012 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		FC1A96751BCA5180009D0315 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC6A580C1BC9783400F6C889 /* MapKit.framework */; };
-		FC1A96771BCA5839009D0315 /* libCloudinary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FC1A96761BCA5839009D0315 /* libCloudinary.a */; settings = {ASSET_TAGS = (); }; };
+		FC1A96771BCA5839009D0315 /* libCloudinary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FC1A96761BCA5839009D0315 /* libCloudinary.a */; };
 		FC6A57D21BC962F000F6C889 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6A57D11BC962F000F6C889 /* AppDelegate.swift */; };
 		FC6A57D71BC962F000F6C889 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC6A57D51BC962F000F6C889 /* Main.storyboard */; };
 		FC6A57DA1BC962F000F6C889 /* CrowdFood.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FC6A57D81BC962F000F6C889 /* CrowdFood.xcdatamodeld */; };
 		FC6A57DC1BC962F000F6C889 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC6A57DB1BC962F000F6C889 /* Assets.xcassets */; };
 		FC6A57DF1BC962F000F6C889 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC6A57DD1BC962F000F6C889 /* LaunchScreen.storyboard */; };
 		FC6A57F51BC962F000F6C889 /* CrowdFoodUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6A57F41BC962F000F6C889 /* CrowdFoodUITests.swift */; };
-		FC6A58061BC96A9600F6C889 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FC6A58031BC96A9600F6C889 /* Default-568h@2x.png */; settings = {ASSET_TAGS = (); }; };
-		FC6A58071BC96A9600F6C889 /* Museo500-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = FC6A58041BC96A9600F6C889 /* Museo500-Regular.otf */; settings = {ASSET_TAGS = (); }; };
-		FC6A58081BC96A9600F6C889 /* restaurant.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = FC6A58051BC96A9600F6C889 /* restaurant.mp4 */; settings = {ASSET_TAGS = (); }; };
-		FC6A580B1BC96C0C00F6C889 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6A580A1BC96C0C00F6C889 /* HomeViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		FC6A580F1BC97AA700F6C889 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6A580E1BC97AA700F6C889 /* MapViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		FC6A58111BC97F0B00F6C889 /* Future.png in Resources */ = {isa = PBXBuildFile; fileRef = FC6A58101BC97F0B00F6C889 /* Future.png */; settings = {ASSET_TAGS = (); }; };
-		FC6E01D61BC9F8550062A9E9 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6E01D51BC9F8550062A9E9 /* API.swift */; settings = {ASSET_TAGS = (); }; };
-		FC85780C1BC9E40300964125 /* ReportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC85780B1BC9E40300964125 /* ReportTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
-		FC85780E1BC9E54600964125 /* ReportsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC85780D1BC9E54600964125 /* ReportsTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		FC9622CA1BCA4260000CD110 /* AddPhotoReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9622C91BCA4260000CD110 /* AddPhotoReportViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		FC9FEA0F1BC9B1B500363A62 /* AddReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9FEA0E1BC9B1B500363A62 /* AddReportViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		FC6A58061BC96A9600F6C889 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FC6A58031BC96A9600F6C889 /* Default-568h@2x.png */; };
+		FC6A58071BC96A9600F6C889 /* Museo500-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = FC6A58041BC96A9600F6C889 /* Museo500-Regular.otf */; };
+		FC6A58081BC96A9600F6C889 /* restaurant.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = FC6A58051BC96A9600F6C889 /* restaurant.mp4 */; };
+		FC6A580B1BC96C0C00F6C889 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6A580A1BC96C0C00F6C889 /* HomeViewController.swift */; };
+		FC6A580F1BC97AA700F6C889 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6A580E1BC97AA700F6C889 /* MapViewController.swift */; };
+		FC6A58111BC97F0B00F6C889 /* Future.png in Resources */ = {isa = PBXBuildFile; fileRef = FC6A58101BC97F0B00F6C889 /* Future.png */; };
+		FC6E01D61BC9F8550062A9E9 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6E01D51BC9F8550062A9E9 /* API.swift */; };
+		FC85780C1BC9E40300964125 /* ReportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC85780B1BC9E40300964125 /* ReportTableViewCell.swift */; };
+		FC85780E1BC9E54600964125 /* ReportsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC85780D1BC9E54600964125 /* ReportsTableViewController.swift */; };
+		FC9622CA1BCA4260000CD110 /* AddPhotoReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9622C91BCA4260000CD110 /* AddPhotoReportViewController.swift */; };
+		FC9FEA0F1BC9B1B500363A62 /* AddReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9FEA0E1BC9B1B500363A62 /* AddReportViewController.swift */; };
+		FCE100A21D021AD000B7A6F4 /* MapView+Delegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE100A11D021AD000B7A6F4 /* MapView+Delegates.swift */; };
+		FCE100A51D0227E900B7A6F4 /* MapView+ImagePickerDelegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE100A41D0227E900B7A6F4 /* MapView+ImagePickerDelegates.swift */; };
+		FCE100A81D02292D00B7A6F4 /* AddPhotoReport+CloudinaryDelegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE100A71D02292D00B7A6F4 /* AddPhotoReport+CloudinaryDelegates.swift */; };
+		FCE100AA1D0229D000B7A6F4 /*  UIPickerViewDelegate .swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE100A91D0229D000B7A6F4 /*  UIPickerViewDelegate .swift */; };
+		FCE100AC1D022A6B00B7A6F4 /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE100AB1D022A6B00B7A6F4 /* Report.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +79,11 @@
 		FC9622C91BCA4260000CD110 /* AddPhotoReportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPhotoReportViewController.swift; sourceTree = "<group>"; };
 		FC9FEA0E1BC9B1B500363A62 /* AddReportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddReportViewController.swift; sourceTree = "<group>"; };
 		FCD6E838F1DAADCADC71A012 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCE100A11D021AD000B7A6F4 /* MapView+Delegates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MapView+Delegates.swift"; sourceTree = "<group>"; };
+		FCE100A41D0227E900B7A6F4 /* MapView+ImagePickerDelegates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MapView+ImagePickerDelegates.swift"; sourceTree = "<group>"; };
+		FCE100A71D02292D00B7A6F4 /* AddPhotoReport+CloudinaryDelegates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AddPhotoReport+CloudinaryDelegates.swift"; sourceTree = "<group>"; };
+		FCE100A91D0229D000B7A6F4 /*  UIPickerViewDelegate .swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = " UIPickerViewDelegate .swift"; sourceTree = "<group>"; };
+		FCE100AB1D022A6B00B7A6F4 /* Report.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Report.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,14 +208,13 @@
 		FC6A58091BC96AC900F6C889 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				FCE100A61D02290C00B7A6F4 /* AddReport */,
+				FCE100A31D021AF500B7A6F4 /* MapView */,
 				FC6E01D21BC9F7450062A9E9 /* Model */,
 				FC6E01D11BC9F2670062A9E9 /* API */,
-				FC85780A1BC9E3DA00964125 /* Cell */,
+				FC85780A1BC9E3DA00964125 /* ReportsTable */,
 				FC6A580A1BC96C0C00F6C889 /* HomeViewController.swift */,
-				FC6A580E1BC97AA700F6C889 /* MapViewController.swift */,
 				FC9FEA0E1BC9B1B500363A62 /* AddReportViewController.swift */,
-				FC85780D1BC9E54600964125 /* ReportsTableViewController.swift */,
-				FC9622C91BCA4260000CD110 /* AddPhotoReportViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -221,16 +230,38 @@
 		FC6E01D21BC9F7450062A9E9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FCE100AB1D022A6B00B7A6F4 /* Report.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
 		};
-		FC85780A1BC9E3DA00964125 /* Cell */ = {
+		FC85780A1BC9E3DA00964125 /* ReportsTable */ = {
 			isa = PBXGroup;
 			children = (
+				FC85780D1BC9E54600964125 /* ReportsTableViewController.swift */,
 				FC85780B1BC9E40300964125 /* ReportTableViewCell.swift */,
 			);
-			name = Cell;
+			name = ReportsTable;
+			sourceTree = "<group>";
+		};
+		FCE100A31D021AF500B7A6F4 /* MapView */ = {
+			isa = PBXGroup;
+			children = (
+				FC6A580E1BC97AA700F6C889 /* MapViewController.swift */,
+				FCE100A11D021AD000B7A6F4 /* MapView+Delegates.swift */,
+				FCE100A41D0227E900B7A6F4 /* MapView+ImagePickerDelegates.swift */,
+			);
+			name = MapView;
+			sourceTree = "<group>";
+		};
+		FCE100A61D02290C00B7A6F4 /* AddReport */ = {
+			isa = PBXGroup;
+			children = (
+				FC9622C91BCA4260000CD110 /* AddPhotoReportViewController.swift */,
+				FCE100A71D02292D00B7A6F4 /* AddPhotoReport+CloudinaryDelegates.swift */,
+				FCE100A91D0229D000B7A6F4 /*  UIPickerViewDelegate .swift */,
+			);
+			name = AddReport;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -395,8 +426,13 @@
 				FC9622CA1BCA4260000CD110 /* AddPhotoReportViewController.swift in Sources */,
 				FC6A580B1BC96C0C00F6C889 /* HomeViewController.swift in Sources */,
 				FC85780C1BC9E40300964125 /* ReportTableViewCell.swift in Sources */,
+				FCE100A21D021AD000B7A6F4 /* MapView+Delegates.swift in Sources */,
+				FCE100AA1D0229D000B7A6F4 /*  UIPickerViewDelegate .swift in Sources */,
+				FCE100A81D02292D00B7A6F4 /* AddPhotoReport+CloudinaryDelegates.swift in Sources */,
+				FCE100AC1D022A6B00B7A6F4 /* Report.swift in Sources */,
 				FC6A580F1BC97AA700F6C889 /* MapViewController.swift in Sources */,
 				FC6E01D61BC9F8550062A9E9 /* API.swift in Sources */,
+				FCE100A51D0227E900B7A6F4 /* MapView+ImagePickerDelegates.swift in Sources */,
 				FC9FEA0F1BC9B1B500363A62 /* AddReportViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
