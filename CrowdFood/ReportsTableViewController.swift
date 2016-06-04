@@ -80,7 +80,7 @@ class ReportsTableViewController: UITableViewController {
           let attributes = data["attribute"] as! NSDictionary
           let reports = attributes["reports"] as! NSArray
           for report in reports {
-            let newReport = Report()
+            var newReport = Report()
             newReport.waiting = report["waiting"] as! Int
             newReport.confirms = report["confirm"] as! Int
             newReport.user = report["userId"] as! String

@@ -32,6 +32,7 @@
 		FCE100A81D02292D00B7A6F4 /* AddPhotoReport+CloudinaryDelegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE100A71D02292D00B7A6F4 /* AddPhotoReport+CloudinaryDelegates.swift */; };
 		FCE100AA1D0229D000B7A6F4 /*  UIPickerViewDelegate .swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE100A91D0229D000B7A6F4 /*  UIPickerViewDelegate .swift */; };
 		FCE100AC1D022A6B00B7A6F4 /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE100AB1D022A6B00B7A6F4 /* Report.swift */; };
+		FCE100B01D02889E00B7A6F4 /* RestaurantPointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE100AF1D02889E00B7A6F4 /* RestaurantPointAnnotation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +85,7 @@
 		FCE100A71D02292D00B7A6F4 /* AddPhotoReport+CloudinaryDelegates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AddPhotoReport+CloudinaryDelegates.swift"; sourceTree = "<group>"; };
 		FCE100A91D0229D000B7A6F4 /*  UIPickerViewDelegate .swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = " UIPickerViewDelegate .swift"; sourceTree = "<group>"; };
 		FCE100AB1D022A6B00B7A6F4 /* Report.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Report.swift; sourceTree = "<group>"; };
+		FCE100AF1D02889E00B7A6F4 /* RestaurantPointAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantPointAnnotation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -250,6 +252,7 @@
 				FC6A580E1BC97AA700F6C889 /* MapViewController.swift */,
 				FCE100A11D021AD000B7A6F4 /* MapView+Delegates.swift */,
 				FCE100A41D0227E900B7A6F4 /* MapView+ImagePickerDelegates.swift */,
+				FCE100AF1D02889E00B7A6F4 /* RestaurantPointAnnotation.swift */,
 			);
 			name = MapView;
 			sourceTree = "<group>";
@@ -422,6 +425,7 @@
 			files = (
 				FC6A57DA1BC962F000F6C889 /* CrowdFood.xcdatamodeld in Sources */,
 				FC85780E1BC9E54600964125 /* ReportsTableViewController.swift in Sources */,
+				FCE100B01D02889E00B7A6F4 /* RestaurantPointAnnotation.swift in Sources */,
 				FC6A57D21BC962F000F6C889 /* AppDelegate.swift in Sources */,
 				FC9622CA1BCA4260000CD110 /* AddPhotoReportViewController.swift in Sources */,
 				FC6A580B1BC96C0C00F6C889 /* HomeViewController.swift in Sources */,

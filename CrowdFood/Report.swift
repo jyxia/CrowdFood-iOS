@@ -6,7 +6,7 @@
 //  Copyright © 2016 Jinyue Xia. All rights reserved.
 //
 
-class Report {
+struct Report {
   var waiting: Int!
   var user: String!
   var elapsedTime: Int!

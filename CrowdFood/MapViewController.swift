@@ -26,7 +26,6 @@ class MapViewController: UIViewController {
     super.viewDidLoad()
     self.navigationController?.setNavigationBarHidden(true, animated: true)
     self.navigationController?.setToolbarHidden(false, animated: true)
-
   }
   
   override func didReceiveMemoryWarning() {
@@ -113,6 +112,9 @@ class MapViewController: UIViewController {
     self.locationManager.startUpdatingLocation()
   }
   
+  // MARK: 
+  // @todo should move all API calls into one place and pass a completion closure callback to the function
+  //
   func retrieveRestaurants() {
     let apiURL = API.sharedInstance.getListRestaurantsAPI()
     
@@ -145,8 +147,7 @@ class MapViewController: UIViewController {
     }
   }
   
-  // - MARK
-  // Pick from camera or gallary
+  // MARK: - Pick from camera or gallary
   //
   func openCamera() {
     let picker:UIImagePickerController = UIImagePickerController()
@@ -166,13 +167,9 @@ class MapViewController: UIViewController {
     }
   }
 
-  //----------------------------------------------------------------------------------------------------------------------
-  // APIs
-  //----------------------------------------------------------------------------------------------------------------------
   func addTimeReport(reportTime: String) {
-    let api = API()
     let currentLocationId = "5619f748e4b0789ae18730d1"
-    let apiURL = api.postRestaurantReportAPI(currentLocationId)
+    let apiURL = API.sharedInstance.postRestaurantReportAPI(currentLocationId)
     let parameters = [
       "userId": "Jinyue",
       "waiting": reportTime
@@ -185,15 +182,6 @@ class MapViewController: UIViewController {
           print(json)
         }
       }
-
-  }
-  
-  class RestaurantPointAnnotation: MKPointAnnotation {
-    var id: String!
-    var waiting: Int!
-    func toString() -> String {
-      return "[id: \(self.id), name: \(self.title), waiting: \(self.waiting), coordinates: \(self.coordinate)]"
-    }
   }
   
 }
